@@ -3,8 +3,8 @@
     --main-color: #9ed4bc;
     --main-color-dark: #5b8a73 ;
     --main-bg: linear-gradient(to right, #9ed4bc, #33684f);
-    --box-shadow-buttons:  0 5px  rgb(113, 170, 142); 
-    --border-radius: 1.2rem;
+    /* --box-shadow-buttons:  0 5px  rgb(113, 170, 142);  */
+    --border-radius: 5rem;
 }
 
 * {
@@ -41,6 +41,7 @@ header {
 h1 {
     font-size: 1.5em;
     color: #333;
+    font-weight: 400;
 }
 
 main {
@@ -68,10 +69,14 @@ input[type="text"] {
     border: 1px solid var(--main-color);
     border-radius: var(--border-radius);
     box-sizing: border-box;
-    outline: none;
+    outline: solid 1px var(--main-color);
     margin-top: 5px ;
     text-align: center;
 }
+
+input[type="text"]:active{
+    outline: solid 2px var(--main-color);
+} 
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -94,6 +99,7 @@ button {
     cursor: pointer;
     transition: background 0.3s;
     box-shadow: var(--box-shadow-buttons);
+    width: 100%;
 }
 
 button:hover {
