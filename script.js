@@ -24,6 +24,9 @@ document.getElementById('percentage-form').addEventListener('submit', function(e
         return;
     }
 
-    const result = (amount * percentage) / 100;
-    document.getElementById('result-value').textContent = result.toLocaleString();
+    const deduction = (amount * percentage) / 100;
+    const resultAmount = amount - deduction;
+    const result = `${amount.toLocaleString()} - ${deduction.toLocaleString()}(${percentage}%) = ${resultAmount.toLocaleString()}`;
+    
+    document.getElementById('result-value').textContent = result;
 });
