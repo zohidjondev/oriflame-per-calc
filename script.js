@@ -20,7 +20,7 @@ document.getElementById('percentage-form').addEventListener('submit', function(e
     const percentage = parseFloat(document.getElementById('custom-percentage').value);
 
     if (isNaN(amount) || isNaN(percentage) || percentage < 1 || percentage > 100) {
-        alert('Please enter valid numbers.');
+        alert('Iltimoz faqat raqam kiriting.');
         return;
     }
 
