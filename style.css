@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --main-color: #77bb9b;
+    --main-color-dark: #365546 ;
+    --main-bg: linear-gradient(to right, #77bb9b, #33684f);
+    --box-shadow-buttons:  0 5px  rgb(73, 116, 95); 
+}
+
 * {
     font-family: 'Poppins', sans-serif;
 }
 body {
     margin: 0;
     padding: 0;
-    background: #006769;
+    background: var(--main-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,10 +64,11 @@ input[type="number"],
 input[type="text"] {
     width: calc(100% - 0px);
     padding: 10px;
-    border: 1px solid #006769;
+    border: 1px solid var(--main-color);
     border-radius: 50px;
     box-sizing: border-box;
     outline: none;
+    margin-top: 5px ;
 }
 
 .button-group {
@@ -70,16 +78,17 @@ input[type="text"] {
 
 button {
     padding: 10px 20px;
-    background: #006769;
+    background: var(--main-color);
     color: #fff;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: background 0.3s;
+    box-shadow: var(--box-shadow-buttons);
 }
 
 button:hover {
-    background: #003e3f;
+    background: var(--main-color-dark);
 }
 
 .percentage-btn {
@@ -100,6 +109,11 @@ button:hover {
     color: #333;
 }
 
+.result span {
+    color: var(--main-color);
+}
+
+
 /* Responsive Design */
 @media (max-width: 600px) {
     .button-group {
@@ -109,3 +123,4 @@ button:hover {
         margin: 5px 0;
     }
 }
+
