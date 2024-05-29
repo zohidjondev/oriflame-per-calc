@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
     --main-color: #9ed4bc;
-    --main-color-dark: #365546 ;
+    --main-color-dark: #5b8a73 ;
     --main-bg: linear-gradient(to right, #9ed4bc, #33684f);
     --box-shadow-buttons:  0 5px  rgb(113, 170, 142); 
+    --border-radius: 1.2rem;
 }
 
 * {
@@ -21,7 +22,7 @@ body {
 
 .container {
     background: #fff;
-    border-radius: 4rem;
+    border-radius: var(--border-radius);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     padding: 20px;
     max-width: 400px;
@@ -65,7 +66,7 @@ input[type="text"] {
     width: calc(100% - 0px);
     padding: 10px;
     border: 1px solid var(--main-color);
-    border-radius: 50px;
+    border-radius: var(--border-radius);
     box-sizing: border-box;
     outline: none;
     margin-top: 5px ;
@@ -89,7 +90,7 @@ button {
     background: var(--main-color);
     color: #fff;
     border: none;
-    border-radius: 50px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     transition: background 0.3s;
     box-shadow: var(--box-shadow-buttons);
