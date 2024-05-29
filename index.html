@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oriflame Foiz Calculatori</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/ORIFLAME_LOGO_STD_DARK_GREY_RGB.png" alt="Oriflame Logo" class="logo">
+            <h1>Oriflame Foiz Calculatori</h1>
+        </header>
+        <main>
+            <form id="percentage-form">
+                <div class="input-group">
+                    <label for="amount">Miqdorni kiriting (UZS):</label>
+                    <input type="text" id="amount" required>
+                </div>
+                <div class="input-group">
+                    <label>Foizni kiriting yoki tanlang (%):</label>
+                    <div class="button-group">
+                        <button type="button" class="percentage-btn" data-percentage="10">10%</button>
+                        <button type="button" class="percentage-btn" data-percentage="20">20%</button>
+                        <input type="number" id="custom-percentage" min="1" max="100" placeholder="Ihtiyoriy %" required>
+                    </div>
+                </div>
+                <button type="submit">Hisoblash</button>
+            </form>
+            <div class="result" id="result">
+                <p>Natija: <span id="result-value">0</span> UZS</p>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
